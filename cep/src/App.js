@@ -43,11 +43,25 @@ function App() {
         </div>
         {Object.keys(cep).length > 0 && (
           <main className="main">
-          <h2>CEP: {cep.cep}</h2>
-          <span>{cep.logradouro}</span>
-          <span>Complemento: {cep.complemento}</span>
-          <span>{cep.bairro}</span>
-          <span>{cep.localidade} - {cep.uf}</span>
+            <h2>CEP: {cep.cep}</h2>
+            
+            {/* só mostra de o cep retornar as seguintes informações */}
+            {cep.logradouro !== '' ?
+              <span>{cep.logradrouro}</span>
+            : null}
+
+
+            {cep.bairro !== '' ?
+              <span>{cep.bairro}</span>
+              :null}
+
+            {cep.complemento !== '' ?
+              <span>{cep.logradrouro}</span>
+            : null}
+            {cep.localidade !== '' ?
+              <span>{cep.localidade} - {cep.uf}</span>
+            : null}
+
         </main>
         )}
     </div>
